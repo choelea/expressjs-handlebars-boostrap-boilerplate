@@ -7,8 +7,6 @@ var hbs = require('hbs');
 var helpers = require('handlebars-helpers');
 var indexRouter = require('./routes/index');
 const favicon = require('express-favicon');
-require('./elasticsearchInit')()
-
 var app = express();
 
 
@@ -31,6 +29,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+/*eslint-disable no-unused-vars */
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
